@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Card from './Card';
-import topRestroData from '../topRestroData'; // Import your topRestroData.js file
+import topRestroData from './topRestroData'; // Import your topRestroData.js file
 
 function OnlineDelievery() {
     const [data] = useState(topRestroData); // Initialize state with data from topRestroData.js
