@@ -5,6 +5,8 @@ import { RiDiscountPercentLine } from "react-icons/ri";
 import { PiDotsThreeCircle } from "react-icons/pi";
 import { RxAvatar } from "react-icons/rx";
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { Link } from 'react-router-dom';
+
 
 function Header() {
     const [toggle, setToggle]=useState(false);
@@ -33,11 +35,11 @@ function Header() {
             <span className='font-bold border-b-[3px] border-black   hover:text-orange-600'>Haldwani</span><span className='text-[#686b78]'>,Uttarakhand 263139, India</span> <RxCaretDown onClick={showSideMenu} className='inline text-[2rem] font-bold text-[#fc8019] 'fontSize={25} />
             </div>
             <nav className=' hidden md:flex list-none gap-10 ml-auto text-[18px] font-semibold'>
-                <li className='flex items-center gap-2  hover:text-orange-600 cursor-pointer'><CgSearch className='inline'/>Search</li>
-                <li className='flex items-center gap-3 hover:text-orange-600 cursor-pointer'><RiDiscountPercentLine className='inline' />Offers <sup className='text-orange-600'>NEW</sup></li>
-                <li className='flex items-center gap-3  hover:text-orange-600 cursor-pointer'><PiDotsThreeCircle className='inline' />Help</li>
-                <li className='flex items-center gap-3  hover:text-orange-600 cursor-pointer' ><RxAvatar  className='inline'/>Sign In</li>
-                <li className='flex items-center gap-3  hover:text-orange-600 cursor-pointer'><MdOutlineShoppingCart className='inline' />Cart</li>
+                <li  className='flex items-center gap-2  hover:text-orange-600 cursor-pointer'><CgSearch className='inline'/><Link to='/search'>Search </Link>   </li>
+                <li  className='flex items-center gap-3 hover:text-orange-600 cursor-pointer'><RiDiscountPercentLine className='inline' /><Link to='/offers'>Offers</Link> <sup className='text-orange-600'>NEW</sup></li>
+                <li  className='flex items-center gap-3  hover:text-orange-600 cursor-pointer'><PiDotsThreeCircle className='inline' /><Link to='/help'>Help</Link></li>
+                <li  className='flex items-center gap-3  hover:text-orange-600 cursor-pointer' ><RxAvatar  className='inline'/><Link to='/signin'>Sign In</Link></li>
+                <li  className='flex items-center gap-3  hover:text-orange-600 cursor-pointer'><MdOutlineShoppingCart className='inline' /><Link to='/cart'>Cart</Link></li>
             </nav>
         </div>
         </header>
