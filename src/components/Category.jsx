@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import categoryData from './categoryData'; // Import your categoryData.js file
 
+
 function Category() {
     const [slide, setSlide] = useState(0);
     const [categories] = useState(categoryData); // No need to use setCategory as data is static
@@ -32,7 +33,7 @@ function Category() {
             <div className='flex overflow-hidden'>
                 {categories.map((cat, index) => (
                     <div style={{ transform: `translateX(-${slide * 100}%)` }} key={index} className='w-[150px] shrink-0 duration-500'>
-                        <img src={require(`./assets/images/${cat.image}`)} alt={cat.path} />
+                        <img src={require(`../assets/images/${cat.image}`)} alt={cat.path} />
                     </div>
                 ))}
             </div>
