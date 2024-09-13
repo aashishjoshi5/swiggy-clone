@@ -1,12 +1,10 @@
-import Category from "./components/Category";
-import Download from "./components/Download";
-import Footer from "./components/Footer";
+
 import Header from "./components/Header";
-import OnlineDelievery from "./components/OnlineDelievery";
-import TopRestaurant from "./components/TopRestaurant";
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Cart from "./pages/Cart";
 import HomePage from "./pages/HomePage";
+import Help from "./pages/Help";
 
 function App() {
   return (
@@ -15,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/cart' element={<Cart />}/>
+        <Route path='/help' element={<Help />} />
       </Routes>
     </Router>
   );
