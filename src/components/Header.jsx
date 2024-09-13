@@ -29,7 +29,10 @@ function Header() {
         <header className=' p-[15px]  shadow-xl  top-0 '> 
         <div className='flex items-center max-w-[1200px] mx-auto '>
             <div className='w-[120px] '>
-                <img src="images/logo.png" className='w-full p-2' alt="" />
+                <Link to="/" >
+                <img src="images/logo.png" className='w-full p-2' alt="swiggy-logo" />
+                </Link>
+                
             </div>
             <div className=''>
             <span className='font-bold border-b-[3px] border-black   hover:text-orange-600'>Haldwani</span><span className='text-[#686b78]'>,Uttarakhand 263139, India</span> <RxCaretDown onClick={showSideMenu} className='inline text-[2rem] font-bold text-[#fc8019] 'fontSize={25} />
